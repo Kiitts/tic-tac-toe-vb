@@ -17,3 +17,4 @@ C:\Users\User\Desktop\Kitts Things 1-1\5-2nd sem\Elective 3\Assignment 1\Tic-Tac
 C:\Users\User\Desktop\Kitts Things 1-1\5-2nd sem\Elective 3\Assignment 1\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net5.0-windows\Tic-Tac-Toe.pdb
 C:\Users\User\Desktop\Kitts Things 1-1\5-2nd sem\Elective 3\Assignment 1\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net5.0-windows\Tic-Tac-Toe.genruntimeconfig.cache
 C:\Users\User\Desktop\Kitts Things 1-1\5-2nd sem\Elective 3\Assignment 1\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net5.0-windows\Tic_Tac_Toe.MainMenu.resources
+C:\Users\User\Desktop\Kitts Things 1-1\5-2nd sem\Elective 3\Assignment 1\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net5.0-windows\Tic_Tac_Toe.GameArea.resources
