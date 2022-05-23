@@ -23,29 +23,42 @@ Partial Class MainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.goToGameAreaTest = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'goToGameAreaTest
         '
-        Me.goToGameAreaTest.Location = New System.Drawing.Point(137, 211)
+        Me.goToGameAreaTest.Location = New System.Drawing.Point(128, 167)
         Me.goToGameAreaTest.Name = "goToGameAreaTest"
         Me.goToGameAreaTest.Size = New System.Drawing.Size(122, 23)
         Me.goToGameAreaTest.TabIndex = 0
         Me.goToGameAreaTest.Text = "Go To Game Area"
         Me.goToGameAreaTest.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(128, 81)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 15)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Game Area"
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 450)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.goToGameAreaTest)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainMenu"
         Me.Text = "MainMenu"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents goToGameAreaTest As Button
+    Friend WithEvents Label1 As Label
 End Class
