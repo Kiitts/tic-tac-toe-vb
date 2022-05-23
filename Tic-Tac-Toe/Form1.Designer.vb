@@ -22,10 +22,30 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.titlePanel = New System.Windows.Forms.Panel()
+        Me.SuspendLayout()
+        '
+        'titlePanel
+        '
+        Me.titlePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.titlePanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.titlePanel.Location = New System.Drawing.Point(0, 0)
+        Me.titlePanel.Name = "titlePanel"
+        Me.titlePanel.Size = New System.Drawing.Size(438, 34)
+        Me.titlePanel.TabIndex = 0
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(438, 503)
+        Me.Controls.Add(Me.titlePanel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents titlePanel As Panel
 End Class
