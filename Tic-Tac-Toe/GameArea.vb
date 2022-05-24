@@ -4,6 +4,10 @@
 Public Class GameArea
     Public player1Turn As Boolean = True
     Public buttons() As Button
+
+    ''' <summary>
+    ''' Load the buttons in the array when GameArea form loads
+    ''' </summary>
     Private Sub GameArea_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         buttons = {t11, t12, t13, t21, t22, t23, t31, t32, t33}
     End Sub
