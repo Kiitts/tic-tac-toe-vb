@@ -22,6 +22,7 @@ Partial Class GameArea
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.tictactoePanel = New System.Windows.Forms.Panel()
         Me.t32 = New System.Windows.Forms.Button()
         Me.t22 = New System.Windows.Forms.Button()
@@ -39,6 +40,7 @@ Partial Class GameArea
         Me.player1Score = New System.Windows.Forms.Label()
         Me.player2Score = New System.Windows.Forms.Label()
         Me.backButton = New System.Windows.Forms.Button()
+        Me.aiTimer = New System.Windows.Forms.Timer(Me.components)
         Me.tictactoePanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -226,6 +228,9 @@ Partial Class GameArea
         Me.backButton.Text = "Go Back"
         Me.backButton.UseVisualStyleBackColor = False
         '
+        'aiTimer
+        '
+        '
         'GameArea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -268,4 +273,5 @@ Partial Class GameArea
     Friend WithEvents player1Score As Label
     Friend WithEvents player2Score As Label
     Friend WithEvents backButton As Button
+    Friend WithEvents aiTimer As Timer
 End Class

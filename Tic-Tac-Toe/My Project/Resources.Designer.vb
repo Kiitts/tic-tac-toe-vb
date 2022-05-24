@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property aiplay_mainmenu_export() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("aiplay_mainmenu-export", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property gametitle_mainmenu_export() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("gametitle_mainmenu-export", resourceCulture)
@@ -96,6 +106,16 @@ Namespace My.Resources
         Friend ReadOnly Property playbutton_mainmenu() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("playbutton_mainmenu", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property playbutton_mainmenu1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("playbutton_mainmenu1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

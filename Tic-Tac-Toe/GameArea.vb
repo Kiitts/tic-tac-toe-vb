@@ -3,6 +3,7 @@
 
 Public Class GameArea
     Public player1Turn As Boolean = True
+    Public rnd = New Random()
     Public buttons() As Button
     Public player1Combinations As New List(Of Short)()
     Public player2Combinations As New List(Of Short)()
@@ -56,7 +57,9 @@ Public Class GameArea
     Public Function Play(but As Button) As Boolean
         ''' Check if btn has already an image
         If but.Image IsNot Nothing Then
-            MessageBox.Show("The tile is used already.")
+            If Not MainMenu.AiGame And player1Turn Then
+                MessageBox.Show("The tile is used already.")
+            End If
             Return False
         Else
             ''' Check whos turn
@@ -65,7 +68,11 @@ Public Class GameArea
                 ' this will remove the t in the name of button the name of button typicall is
                 ' t[row][column] so if i press t33, it will save to their combination as 33
                 player1Combinations.Add(CShort(but.Name.Replace("t", "")))
-                turnLabel.Text = "PLAYER 2 [O] Turn"
+                If MainMenu.AiGame Then
+                    turnLabel.Text = "AI TURN [O]"
+                Else
+                    turnLabel.Text = "PLAYER 2 [O] Turn"
+                End If
             Else
                 but.Image = My.Resources.otile_gamearea1
                 ' this will remove the t in the name of button the name of button typicall is
@@ -154,6 +161,17 @@ Public Class GameArea
     End Sub
 
     ''' <summary>
+    ''' enabling all buttons
+    ''' ai will move and select random button for its move
+    ''' </summary>
+    Public Sub AiMove()
+        For Each but In buttons
+            but.Enabled = True
+        Next
+        buttons(rnd.Next(0, buttons.Count)).PerformClick()
+    End Sub
+
+    ''' <summary>
     ''' This will trigger if any tile is clicked
     ''' When any play tile is clicked
     ''' </summary>
@@ -170,7 +188,21 @@ Public Class GameArea
                 End If
             End If
         End If
+        ''' starting the timer indicating that the ai is thinking
+        ''' and disabling all buttons
+        If MainMenu.AiGame And (Not player1Turn) Then
+            For Each but In buttons
+                but.Enabled = False
+            Next
+            aiTimer.Start()
+        End If
     End Sub
 
-
+    ''' <summary>
+    ''' when the timer tick indicating the ai is done thinking it will now move
+    ''' </summary>
+    Private Sub aiTimer_Tick(sender As Object, e As EventArgs) Handles aiTimer.Tick
+        aiTimer.Stop()
+        AiMove()
+    End Sub
 End Class
