@@ -143,6 +143,7 @@ Partial Class GameArea
         '
         Me.t11.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.t11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.t11.ForeColor = System.Drawing.Color.Black
         Me.t11.Location = New System.Drawing.Point(3, 3)
         Me.t11.Name = "t11"
         Me.t11.Size = New System.Drawing.Size(90, 90)
@@ -201,7 +202,7 @@ Partial Class GameArea
         Me.player1Score.Name = "player1Score"
         Me.player1Score.Size = New System.Drawing.Size(88, 18)
         Me.player1Score.TabIndex = 5
-        Me.player1Score.Text = "1"
+        Me.player1Score.Text = "0"
         '
         'player2Score
         '

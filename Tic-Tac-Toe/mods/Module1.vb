@@ -1,4 +1,7 @@
-﻿Module Module1
+﻿''' <summary>
+''' This module1 is created since this is needed for my application to change panel forms
+''' </summary>
+Module Module1
     ''' <summary>
     ''' load the form from the main panel of the form where main panel is located
     ''' </summary>
