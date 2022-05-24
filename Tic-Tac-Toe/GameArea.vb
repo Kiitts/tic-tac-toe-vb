@@ -91,7 +91,7 @@ Public Class GameArea
         Next
         If draw Then
             MessageBox.Show("Draw!")
-            Reset()
+            Reset(False)
             Return False
         End If
         Return True
