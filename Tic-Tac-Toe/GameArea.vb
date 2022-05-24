@@ -52,10 +52,12 @@ Public Class GameArea
     ''' changes the text on the turn label
     ''' </summary>
     ''' <param name="but">button that is clicked</param>
-    Public Sub Play(but As Button)
+    ''' <returns>Return true or false if the game continues or not</returns>
+    Public Function Play(but As Button) As Boolean
         ''' Check if btn has already an image
         If but.Image IsNot Nothing Then
             MessageBox.Show("The tile is used already.")
+            Return False
         Else
             ''' Check whos turn
             If player1Turn Then
@@ -72,7 +74,28 @@ Public Class GameArea
                 turnLabel.Text = "PLAYER 1 [X] Turn"
             End If
         End If
-    End Sub
+        Return True
+    End Function
+
+    ''' <summary>
+    ''' will check if the tiles is out and declare it's a draw then reset the game
+    ''' </summary>
+    ''' <returns>Return true or false if the game continues or not</returns>
+    Public Function CheckForDraw() As Boolean
+        Dim draw As Boolean = True
+        For Each but As Button In buttons
+            If but.Image Is Nothing Then
+                draw = False
+                Exit For
+            End If
+        Next
+        If draw Then
+            MessageBox.Show("Draw!")
+            Reset()
+            Return False
+        End If
+        Return True
+    End Function
 
     ''' <summary>
     ''' check if someone has won
@@ -135,12 +158,17 @@ Public Class GameArea
     ''' When any play tile is clicked
     ''' </summary>
     Private Sub tiles_click(sender As Object, e As EventArgs) Handles t11.Click, t33.Click, t32.Click, t31.Click, t23.Click, t22.Click, t21.Click, t13.Click, t12.Click
-        Play(DirectCast(sender, Button))
-        Dim someoneWin As Boolean = WinCheck(player1Turn)
-        If someoneWin Then
-            Winner(player1Turn)
-        Else
-            player1Turn = Not player1Turn
+        Dim playContinue As Boolean = Play(DirectCast(sender, Button))
+        If playContinue Then
+            Dim someoneWin As Boolean = WinCheck(player1Turn)
+            If someoneWin Then
+                Winner(player1Turn)
+            Else
+                playContinue = CheckForDraw()
+                If playContinue Then
+                    player1Turn = Not player1Turn
+                End If
+            End If
         End If
     End Sub
 
