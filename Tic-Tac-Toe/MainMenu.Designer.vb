@@ -43,7 +43,7 @@ Partial Class MainMenu
         Me.playButton.BackColor = System.Drawing.Color.Transparent
         Me.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.playButton.Image = Global.Tic_Tac_Toe.My.Resources.Resources.playbutton_mainmenu
-        Me.playButton.Location = New System.Drawing.Point(59, 251)
+        Me.playButton.Location = New System.Drawing.Point(59, 310)
         Me.playButton.Name = "playButton"
         Me.playButton.Size = New System.Drawing.Size(400, 68)
         Me.playButton.TabIndex = 1
