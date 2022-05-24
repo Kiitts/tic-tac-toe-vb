@@ -23,15 +23,15 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.titlePanel = New System.Windows.Forms.Panel()
+        Me.titleLabel = New System.Windows.Forms.Label()
         Me.closeButton = New System.Windows.Forms.Button()
         Me.mainPanel = New System.Windows.Forms.Panel()
-        Me.titleLabel = New System.Windows.Forms.Label()
         Me.titlePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'titlePanel
         '
-        Me.titlePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.titlePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.titlePanel.Controls.Add(Me.titleLabel)
         Me.titlePanel.Controls.Add(Me.closeButton)
         Me.titlePanel.Dock = System.Windows.Forms.DockStyle.Top
@@ -39,6 +39,16 @@ Partial Class Form1
         Me.titlePanel.Name = "titlePanel"
         Me.titlePanel.Size = New System.Drawing.Size(520, 34)
         Me.titlePanel.TabIndex = 0
+        '
+        'titleLabel
+        '
+        Me.titleLabel.AutoSize = True
+        Me.titleLabel.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.titleLabel.Location = New System.Drawing.Point(12, 9)
+        Me.titleLabel.Name = "titleLabel"
+        Me.titleLabel.Size = New System.Drawing.Size(118, 18)
+        Me.titleLabel.TabIndex = 0
+        Me.titleLabel.Text = "Tic-Tac-Toe"
         '
         'closeButton
         '
@@ -62,16 +72,6 @@ Partial Class Form1
         Me.mainPanel.Name = "mainPanel"
         Me.mainPanel.Size = New System.Drawing.Size(520, 508)
         Me.mainPanel.TabIndex = 1
-        '
-        'titleLabel
-        '
-        Me.titleLabel.AutoSize = True
-        Me.titleLabel.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.titleLabel.Location = New System.Drawing.Point(12, 9)
-        Me.titleLabel.Name = "titleLabel"
-        Me.titleLabel.Size = New System.Drawing.Size(118, 18)
-        Me.titleLabel.TabIndex = 0
-        Me.titleLabel.Text = "Tic-Tac-Toe"
         '
         'Form1
         '

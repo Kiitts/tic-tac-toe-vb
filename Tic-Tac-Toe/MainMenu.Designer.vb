@@ -22,7 +22,6 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.titlePicture = New System.Windows.Forms.PictureBox()
         Me.playButton = New System.Windows.Forms.Button()
         CType(Me.titlePicture, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -31,7 +30,7 @@ Partial Class MainMenu
         'titlePicture
         '
         Me.titlePicture.BackColor = System.Drawing.Color.Transparent
-        Me.titlePicture.Image = CType(resources.GetObject("titlePicture.Image"), System.Drawing.Image)
+        Me.titlePicture.Image = Global.Tic_Tac_Toe.My.Resources.Resources.gametitle_mainmenu_export
         Me.titlePicture.Location = New System.Drawing.Point(59, 12)
         Me.titlePicture.Name = "titlePicture"
         Me.titlePicture.Size = New System.Drawing.Size(400, 200)
@@ -53,7 +52,7 @@ Partial Class MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Maroon
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(520, 508)
         Me.Controls.Add(Me.playButton)
         Me.Controls.Add(Me.titlePicture)
