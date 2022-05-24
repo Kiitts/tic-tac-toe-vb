@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,45 +20,53 @@ Partial Class MainMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.goToGameAreaTest = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
+        Me.titlePicture = New System.Windows.Forms.PictureBox()
+        Me.playButton = New System.Windows.Forms.Button()
+        CType(Me.titlePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'goToGameAreaTest
+        'titlePicture
         '
-        Me.goToGameAreaTest.Location = New System.Drawing.Point(128, 167)
-        Me.goToGameAreaTest.Name = "goToGameAreaTest"
-        Me.goToGameAreaTest.Size = New System.Drawing.Size(122, 23)
-        Me.goToGameAreaTest.TabIndex = 0
-        Me.goToGameAreaTest.Text = "Go To Game Area"
-        Me.goToGameAreaTest.UseVisualStyleBackColor = True
+        Me.titlePicture.BackColor = System.Drawing.Color.Transparent
+        Me.titlePicture.Image = CType(resources.GetObject("titlePicture.Image"), System.Drawing.Image)
+        Me.titlePicture.Location = New System.Drawing.Point(59, 12)
+        Me.titlePicture.Name = "titlePicture"
+        Me.titlePicture.Size = New System.Drawing.Size(400, 200)
+        Me.titlePicture.TabIndex = 0
+        Me.titlePicture.TabStop = False
         '
-        'Label1
+        'playButton
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(128, 81)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 15)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Game Area"
+        Me.playButton.BackColor = System.Drawing.Color.Transparent
+        Me.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.playButton.Image = Global.Tic_Tac_Toe.My.Resources.Resources.playbutton_mainmenu
+        Me.playButton.Location = New System.Drawing.Point(59, 310)
+        Me.playButton.Name = "playButton"
+        Me.playButton.Size = New System.Drawing.Size(400, 68)
+        Me.playButton.TabIndex = 1
+        Me.playButton.UseVisualStyleBackColor = False
         '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 450)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.goToGameAreaTest)
+        Me.BackColor = System.Drawing.Color.Maroon
+        Me.ClientSize = New System.Drawing.Size(520, 508)
+        Me.Controls.Add(Me.playButton)
+        Me.Controls.Add(Me.titlePicture)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximumSize = New System.Drawing.Size(520, 508)
+        Me.MinimumSize = New System.Drawing.Size(520, 508)
         Me.Name = "MainMenu"
         Me.Text = "MainMenu"
+        CType(Me.titlePicture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents goToGameAreaTest As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents titlePicture As PictureBox
+    Friend WithEvents playButton As Button
 End Class
