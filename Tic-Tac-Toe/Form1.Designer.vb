@@ -25,17 +25,19 @@ Partial Class Form1
         Me.titlePanel = New System.Windows.Forms.Panel()
         Me.closeButton = New System.Windows.Forms.Button()
         Me.mainPanel = New System.Windows.Forms.Panel()
+        Me.titleLabel = New System.Windows.Forms.Label()
         Me.titlePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'titlePanel
         '
         Me.titlePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.titlePanel.Controls.Add(Me.titleLabel)
         Me.titlePanel.Controls.Add(Me.closeButton)
         Me.titlePanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.titlePanel.Location = New System.Drawing.Point(0, 0)
         Me.titlePanel.Name = "titlePanel"
-        Me.titlePanel.Size = New System.Drawing.Size(438, 34)
+        Me.titlePanel.Size = New System.Drawing.Size(520, 34)
         Me.titlePanel.TabIndex = 0
         '
         'closeButton
@@ -44,7 +46,7 @@ Partial Class Form1
         Me.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.closeButton.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.closeButton.ForeColor = System.Drawing.Color.Red
-        Me.closeButton.Location = New System.Drawing.Point(403, 1)
+        Me.closeButton.Location = New System.Drawing.Point(485, 1)
         Me.closeButton.Margin = New System.Windows.Forms.Padding(0)
         Me.closeButton.Name = "closeButton"
         Me.closeButton.Size = New System.Drawing.Size(26, 30)
@@ -58,22 +60,33 @@ Partial Class Form1
         Me.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.mainPanel.Location = New System.Drawing.Point(0, 34)
         Me.mainPanel.Name = "mainPanel"
-        Me.mainPanel.Size = New System.Drawing.Size(438, 469)
+        Me.mainPanel.Size = New System.Drawing.Size(520, 508)
         Me.mainPanel.TabIndex = 1
+        '
+        'titleLabel
+        '
+        Me.titleLabel.AutoSize = True
+        Me.titleLabel.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.titleLabel.Location = New System.Drawing.Point(12, 9)
+        Me.titleLabel.Name = "titleLabel"
+        Me.titleLabel.Size = New System.Drawing.Size(118, 18)
+        Me.titleLabel.TabIndex = 0
+        Me.titleLabel.Text = "Tic-Tac-Toe"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(438, 503)
+        Me.ClientSize = New System.Drawing.Size(520, 542)
         Me.Controls.Add(Me.mainPanel)
         Me.Controls.Add(Me.titlePanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MaximumSize = New System.Drawing.Size(438, 503)
-        Me.MinimumSize = New System.Drawing.Size(438, 503)
+        Me.MinimumSize = New System.Drawing.Size(520, 542)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tic-Tac-Toe"
         Me.titlePanel.ResumeLayout(False)
+        Me.titlePanel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -81,4 +94,5 @@ Partial Class Form1
     Friend WithEvents titlePanel As Panel
     Friend WithEvents closeButton As Button
     Friend WithEvents mainPanel As Panel
+    Friend WithEvents titleLabel As Label
 End Class
