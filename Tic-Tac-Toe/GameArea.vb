@@ -18,8 +18,10 @@ Public Class GameArea
 
     ''' <summary>
     ''' Clear the images on tiles and clear the combinations made by the players
+    ''' and reset score of players if with score is true
+    ''' <param name="withScore">if this is true score will also reset</param>
     ''' </summary>
-    Public Sub Reset()
+    Public Sub Reset(Optional withScore As Boolean = True)
         turnLabel.Text = "PLAYER 1 [X] Turn"
         For i = 0 To 8
             If buttons(i).Image IsNot Nothing Then
@@ -29,6 +31,10 @@ Public Class GameArea
         player1Turn = True
         player1Combinations.Clear()
         player2Combinations.Clear()
+        If withScore Then
+            player1Score.Text = 0
+            player2Score.Text = 0
+        End If
     End Sub
     ''' <summary>
     ''' changes main panel form to MainMenu form
@@ -108,11 +114,19 @@ Public Class GameArea
         Return False
     End Function
 
-    Public Sub MessageForWinner(player1Win)
+    ''' <summary>
+    ''' Congratulate winner through message box then increment the winner score
+    ''' </summary>
+    ''' <param name="player1Win">check if the player1 wins</param>
+    Public Sub Winner(player1Win)
         If player1Win Then
             MessageBox.Show("Player 1 Wins!")
+            player1Score.Text = (CShort(player1Score.Text) + 1).ToString()
+            Reset(False)
         Else
             MessageBox.Show("Player 2 Wins!")
+            player2Score.Text = (CShort(player2Score.Text) + 1).ToString()
+            Reset(False)
         End If
     End Sub
 
@@ -124,11 +138,10 @@ Public Class GameArea
         Play(DirectCast(sender, Button))
         Dim someoneWin As Boolean = WinCheck(player1Turn)
         If someoneWin Then
-            MessageForWinner(player1Turn)
+            Winner(player1Turn)
         Else
             player1Turn = Not player1Turn
         End If
-
     End Sub
 
 
