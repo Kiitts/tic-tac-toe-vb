@@ -24,9 +24,11 @@ Public Class GameArea
             ''' Check whos turn
             If player1Turn Then
                 but.Image = My.Resources.xtile_gamearea1
+                turnLabel.Text = "PLAYER 2 [O] Turn"
                 player1Turn = Not player1Turn
             Else
                 but.Image = My.Resources.otile_gamearea1
+                turnLabel.Text = "PLAYER 1 [X] Turn"
                 player1Turn = Not player1Turn
             End If
         End If

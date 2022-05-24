@@ -202,7 +202,7 @@ Partial Class GameArea
         Me.player1Score.Name = "player1Score"
         Me.player1Score.Size = New System.Drawing.Size(88, 18)
         Me.player1Score.TabIndex = 5
-        Me.player1Score.Text = "1"
+        Me.player1Score.Text = "0"
         '
         'player2Score
         '
