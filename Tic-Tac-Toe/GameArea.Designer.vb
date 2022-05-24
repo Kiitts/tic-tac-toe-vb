@@ -143,6 +143,7 @@ Partial Class GameArea
         '
         Me.t11.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.t11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.t11.Image = Global.Tic_Tac_Toe.My.Resources.Resources.playbutton_mainmenu
         Me.t11.Location = New System.Drawing.Point(3, 3)
         Me.t11.Name = "t11"
         Me.t11.Size = New System.Drawing.Size(90, 90)
