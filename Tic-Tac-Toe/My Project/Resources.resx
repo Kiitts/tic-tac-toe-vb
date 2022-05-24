@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="playbutton_mainmenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\playbutton_mainmenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="otile_gamearea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imgs\otile_gamearea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="otile_gamearea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imgs\otile_gamearea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,13 +127,19 @@
   <data name="gametitle_mainmenu-export" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imgs\gametitle_mainmenu-export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xtile_gamearea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\xtile_gamearea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aiplay_mainmenu-export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imgs\aiplay_mainmenu-export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="otile_gamearea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\otile_gamearea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playbutton_mainmenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imgs\playbutton_mainmenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xtile_gamearea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imgs\xtile_gamearea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xtile_gamearea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imgs\xtile_gamearea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playbutton_mainmenu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imgs\playbutton_mainmenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

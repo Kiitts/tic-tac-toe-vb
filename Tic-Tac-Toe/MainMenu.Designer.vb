@@ -24,6 +24,7 @@ Partial Class MainMenu
     Private Sub InitializeComponent()
         Me.titlePicture = New System.Windows.Forms.PictureBox()
         Me.playButton = New System.Windows.Forms.Button()
+        Me.computerPlay = New System.Windows.Forms.Button()
         CType(Me.titlePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,12 +42,23 @@ Partial Class MainMenu
         '
         Me.playButton.BackColor = System.Drawing.Color.Transparent
         Me.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.playButton.Image = Global.Tic_Tac_Toe.My.Resources.Resources.playbutton_mainmenu
-        Me.playButton.Location = New System.Drawing.Point(59, 310)
+        Me.playButton.Image = Global.Tic_Tac_Toe.My.Resources.Resources.playbutton_mainmenu1
+        Me.playButton.Location = New System.Drawing.Point(59, 254)
         Me.playButton.Name = "playButton"
         Me.playButton.Size = New System.Drawing.Size(400, 68)
         Me.playButton.TabIndex = 1
         Me.playButton.UseVisualStyleBackColor = False
+        '
+        'computerPlay
+        '
+        Me.computerPlay.BackColor = System.Drawing.Color.Transparent
+        Me.computerPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.computerPlay.Image = Global.Tic_Tac_Toe.My.Resources.Resources.aiplay_mainmenu_export
+        Me.computerPlay.Location = New System.Drawing.Point(59, 356)
+        Me.computerPlay.Name = "computerPlay"
+        Me.computerPlay.Size = New System.Drawing.Size(400, 68)
+        Me.computerPlay.TabIndex = 2
+        Me.computerPlay.UseVisualStyleBackColor = False
         '
         'MainMenu
         '
@@ -54,6 +66,7 @@ Partial Class MainMenu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(520, 508)
+        Me.Controls.Add(Me.computerPlay)
         Me.Controls.Add(Me.playButton)
         Me.Controls.Add(Me.titlePicture)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -68,4 +81,5 @@ Partial Class MainMenu
 
     Friend WithEvents titlePicture As PictureBox
     Friend WithEvents playButton As Button
+    Friend WithEvents computerPlay As Button
 End Class
