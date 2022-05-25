@@ -154,7 +154,11 @@ Public Class GameArea
             player1Score.Text = (CShort(player1Score.Text) + 1).ToString()
             Reset(False)
         Else
-            MessageBox.Show("Player 2 Wins!")
+            If MainMenu.AiGame Then
+                MessageBox.Show("AI Wins!")
+            Else
+                MessageBox.Show("Player 2 Wins!")
+            End If
             player2Score.Text = (CShort(player2Score.Text) + 1).ToString()
             Reset(False)
         End If
