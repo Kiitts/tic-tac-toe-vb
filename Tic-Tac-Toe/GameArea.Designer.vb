@@ -41,6 +41,7 @@ Partial Class GameArea
         Me.player2Score = New System.Windows.Forms.Label()
         Me.backButton = New System.Windows.Forms.Button()
         Me.aiTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.autoLoad = New System.Windows.Forms.Timer(Me.components)
         Me.tictactoePanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -230,6 +231,11 @@ Partial Class GameArea
         '
         'aiTimer
         '
+        Me.aiTimer.Interval = 200
+        '
+        'autoLoad
+        '
+        Me.autoLoad.Interval = 10
         '
         'GameArea
         '
@@ -274,4 +280,5 @@ Partial Class GameArea
     Friend WithEvents player2Score As Label
     Friend WithEvents backButton As Button
     Friend WithEvents aiTimer As Timer
+    Friend WithEvents autoLoad As Timer
 End Class

@@ -11,6 +11,7 @@ Public Class MainMenu
 
     Private Sub computerPlay_Click(sender As Object, e As EventArgs) Handles computerPlay.Click
         AiGame = True
+        GameArea.autoLoad.Start()
         Module1.loadForm(GameArea, Form1)
     End Sub
 End Class
