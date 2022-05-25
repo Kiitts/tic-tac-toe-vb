@@ -16,6 +16,16 @@ Public Class GameArea
     Private Sub GameArea_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         buttons = {t11, t12, t13, t21, t22, t23, t31, t32, t33}
     End Sub
+    ''' <summary>
+    ''' Load the score label for player 2 if ai or not
+    ''' </summary>
+    Private Sub autoLoad_Tick(sender As Object, e As EventArgs) Handles autoLoad.Tick
+        If MainMenu.AiGame Then
+            player2ScoreLabel.Text = "AI"
+        Else
+            player2ScoreLabel.Text = "Player 2"
+        End If
+    End Sub
 
     ''' <summary>
     ''' Clear the images on tiles and clear the combinations made by the players
